@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%behlnort\n" "$((water#$WATER + stir#$STIR))" 
+printf '%behlnort\n' "$((water#$WATER + stir#$STIR))" 
