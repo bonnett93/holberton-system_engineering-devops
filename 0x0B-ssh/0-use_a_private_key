@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ssh ubutu@34.138.233.200 -i ~/.ssh/holberton
