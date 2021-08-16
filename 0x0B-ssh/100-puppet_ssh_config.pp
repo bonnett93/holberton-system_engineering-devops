@@ -1,5 +1,9 @@
 # create the file ssh/config
 node default{
+  account { 'ubuntu':
+    ensure => present,
+  }
+  $ssh_user = 'ubuntu'
   file{'~/.ssh/ssh_config'
   ensure  => present,
   content => 'PasswordAuthentication no
