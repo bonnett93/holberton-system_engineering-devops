@@ -4,3 +4,4 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School for the win!" >> index.html
 sudo mv index.html /var/www/html
+sudo service nginx restart
