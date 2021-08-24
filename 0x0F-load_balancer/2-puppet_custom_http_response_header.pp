@@ -38,5 +38,6 @@ file_line {'Add new header':
 }
 
 exec {'restart nginx':
-	command => 'sudo service nginx restart'
+	command => 'sudo service nginx restart',
+	path => ['/usr/bin', '/sbin', '/bin', '/usr/sbin']
 }
