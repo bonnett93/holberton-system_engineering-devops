@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Configure your Nginx server to have a header X-Served-By $hostname
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Holberton School for the win!" >> index.html
+sudo mv index.html /var/www/html
+suffix='server_name _;'
+new_string_3='\n\tlocation /redirect_me{\n\t\treturn 301 https://www.linkedin.com/in/jordan-bonnett-gomez/;\n\t}'
+sed -i "/$suffix/a\\$new_string_3" /etc/nginx/sites-available/default
+sudo echo "Ceci n'est pas une page" >> /var/www/html/error404.html
+new_string_4="\n\terror_page 404 /error404.html;"
+sed -i "/$suffix/a\\$new_string_4" /etc/nginx/sites-available/default
+new_string_F0='\n\tadd_header X-Served-By $hostname;\n'
+sed -i "/$suffix/a\\$new_string_F0" /etc/nginx/sites-available/default
+sudo service nginx restart
