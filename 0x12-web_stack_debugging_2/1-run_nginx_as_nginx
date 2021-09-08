@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Running nginx as nginx, in port 8080
+sed -i "s/80/8080/" /etc/nginx/sites-available/default
+sudo -u nginx service nginx restart
