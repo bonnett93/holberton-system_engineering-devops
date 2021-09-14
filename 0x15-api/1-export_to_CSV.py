@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module: 0-gather_data_from_an_API.py"""
+"""Module: 1-export_to_CSV"""
 import csv
 import json
 import requests
