@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     for task in task_req:
         file_data.append([str(USER_ID), str(USER_NAME),
-                        task['completed'], task['title']])
+                          task['completed'], task['title']])
 
     with open(FILE_NAME, mode='w', encoding='UTF-8') as file:
         my_writer = csv.writer(file, quotechar='"', quoting=csv.QUOTE_ALL)
