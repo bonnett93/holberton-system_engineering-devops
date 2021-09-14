@@ -31,4 +31,4 @@ if __name__ == "__main__":
 
     for task in task_req:
         if task['completed'] is True:
-            print(' \t{}'.format(task['title']))
+            print('\t {}'.format(task['title']))
