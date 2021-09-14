@@ -5,6 +5,10 @@ import requests
 import sys
 
 if __name__ == "__main__":
+
+    if len(sys.argv < 2):
+        sys.exit()
+
     id = sys.argv[1]
 
     # fetch('https://jsonplaceholder.typicode.com/todos/1')
